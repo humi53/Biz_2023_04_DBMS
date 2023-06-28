@@ -47,3 +47,4 @@ System에 직접 접근하는 것은 금지하고, 그외 권한을 모두 부�
 */
 -- 사용자ID addr 에게 DBA 권한을 부여한다
 GRANT DBA TO addr;
+

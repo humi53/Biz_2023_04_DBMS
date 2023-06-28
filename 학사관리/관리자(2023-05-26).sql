@@ -51,7 +51,7 @@ DEFAULT TABLESPACE student;
 -- student 사용자 에게 DBA(데이터 관리자) 권한을 부여하라
 GRANT DBA TO student;
 
-
+---------------------------------------------------------------------
 CREATE TABLESPACE memo -- 저장소의 이름을 student 라는 이름으로 사용하겠다
 DATAFILE 'C:/app/data/memo.dbf' -- 저장소 폴더에 student.dbf 라는 이름으로 생성
 SIZE 1M AUTOEXTEND ON NEXT 1K;
@@ -61,4 +61,15 @@ CREATE USER memo IDENTIFIED BY 12341234
 DEFAULT TABLESPACE memo;
 
 GRANT DBA TO memo;
+
+-----------------------------------------------------------------------
+CREATE TABLESPACE shopping -- 저장소의 이름을 student 라는 이름으로 사용하겠다
+DATAFILE 'C:/app/data/shoping.dbf' -- 저장소 폴더에 student.dbf 라는 이름으로 생성
+SIZE 1M AUTOEXTEND ON NEXT 1K;
+
+ALTER SESSION SET "_ORACLE_SCRIPT" = true;
+CREATE USER shopping IDENTIFIED BY 12341234
+DEFAULT TABLESPACE shopping;
+
+GRANT DBA TO shopping;
 

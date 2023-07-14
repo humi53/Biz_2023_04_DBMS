@@ -282,9 +282,3 @@ MySQL 권한부여하기
 		주소록에서 홍길동 인 사람의 전화번호가 010-111... 이다
         이 전화번호를 010-222 으로 바꾸어라
 */
-
-USE iolistdb;
-SELECT p_code '상품코드', p_name '상품명', count(*) '레코드수'
-FROM tbl_iolist, tbl_product
-WHERE io_pcode = p_code
-GROUP BY io_pcode, p_name;	
